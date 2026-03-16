@@ -10,9 +10,11 @@
         "    Write-Host 'Warning: Equalizer APO was not found on this system!' -ForegroundColor Yellow",
         "    Write-Host 'Install Equalizer APO first, then reinstall HeSuVi.' -ForegroundColor Yellow",
         "} else {",
-        "    Write-Host 'Moving HeSuVi to Equalizer APO config directory to preserve permissions...' -ForegroundColor Green",
+        "    Write-Host 'Copying HeSuVi to Equalizer APO config directory and fixing permissions...' -ForegroundColor Green",
         "    if (Test-Path \"$apoPath\\HeSuVi\") { Remove-Item \"$apoPath\\HeSuVi\" -Force -Recurse }",
-        "    Move-Item -Path \"$dir\\HeSuVi\" -Destination \"$apoPath\\HeSuVi\" -Force",
+        "    Copy-Item -Path \"$dir\\HeSuVi\" -Destination \"$apoPath\\HeSuVi\" -Recurse -Force",
+        "    Remove-Item -Path \"$dir\\HeSuVi\" -Recurse -Force",
+        "    icacls \"$apoPath\\HeSuVi\" /reset /T /C /Q | Out-Null",
         "    New-Item -ItemType Junction -Path \"$dir\\HeSuVi\" -Target \"$apoPath\\HeSuVi\" -Force | Out-Null",
         "}"
     ],
