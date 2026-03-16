@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>vb-cable</id>
+    <version>43.0</version>
+    <title>VB-CABLE Virtual Audio Device</title>
+    <authors>Vincent Burel</authors>
+    <owners>chtof</owners>
+    <licenseUrl>https://www.vb-audio.com/Services/licensing.htm</licenseUrl>
+    <projectUrl>https://www.vb-audio.com/Cable</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>VB-CABLE is a virtual audio device working as virtual audio cable. All audio signals coming in the CABLE input is transported to the CABLE output. Then It becomes simple to make computer audio recording or to connect a player application to a recorder one.
+
+## Virtual Audio Cables
+To Connect 2x Applications together! A Player to a Recorder.
+
+## VB-CABLE TECHNOLOGY
+
+VB-Audio CABLE is a Windows Audio Driver working as Virtual Audio Cable. Thanks to its Multi-Format Audio Engine, VB-CABLE can be used without any configuration! Ready to work with all Audio Application using MME, KS, DX, KS or WASAPI interfaces.
+
+## VIRTUAL AUDIO APPLICATIONS
+
+With VB-CABLE Technology, VB-Audio Applications can be endowed with Virtual I/O and provide new amazing audio experiences. So let's follow us and try our different products presented on this page!
+
+![screenshot](https://cdn.jsdelivr.net/gh/chtof/chocolatey-packages/manual/vb-cable/screenshot.png)</description>
+    <summary>[[Summary]]</summary>
+    <copyright>Copyright V.Burel ©1998-2019. All rights reserved.</copyright>
+    <tags>vb-cable virtual audio device cable</tags>
+    <packageSourceUrl>https://github.com/chtof/chocolatey-packages/tree/master/manual/vb-cable</packageSourceUrl>
+    <docsUrl>https://www.vb-audio.com/Cable/VBCABLE_CaseStudy_XP.pdf</docsUrl>
+    <mailingListUrl>https://forum.vb-audio.com</mailingListUrl>
+    <bugTrackerUrl>https://www.vb-audio.com/Services/support.htm</bugTrackerUrl>
+    <dependencies>
+      <dependency id="autohotkey.install" version="1.1.30.03" />
+    </dependencies>
+  </metadata>
+</package>
