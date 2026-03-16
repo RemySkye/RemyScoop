@@ -22,9 +22,9 @@
             "}",
             "Write-Host 'Installing driver silently...'",
             "if ($architecture -eq '64bit') {",
-            "    & pnputil.exe /add-driver \"$dir\\vbMmeCable64_win10.inf\" /install | Out-Null",
+            "    & \"$dir\\VBCABLE_Setup_x64.exe\" -i -h | Out-Null",
             "} else {",
-            "    & pnputil.exe /add-driver \"$dir\\vbMmeCable_win7.inf\" /install | Out-Null",
+            "    & \"$dir\\VBCABLE_Setup.exe\" -i -h | Out-Null",
             "}"
         ]
     },
