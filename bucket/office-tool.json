@@ -1,0 +1,33 @@
+{
+    "version": "11.1.16.0",
+    "description": "Office Tool Plus is a tool for managing, downloading and installing Office.",
+    "homepage": "https://otp.landian.vip/",
+    "license": "Freeware",
+    "extract_dir": "Office Tool",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/YerongAI/Office-Tool/releases/download/v11.1.16.0/Office_Tool_with_runtime_v11.1.16.0_x64.zip",
+            "hash": "A2E3D44D2F7EFEA8863DD1CDAD358CFBAE6915CE268A5E27858B3BEDDC1A0601"
+        },
+        "arm64": {
+            "url": "https://github.com/YerongAI/Office-Tool/releases/download/v11.1.16.0/Office_Tool_with_runtime_v11.1.16.0_arm64.zip",
+            "hash": "0D768FE7F73AB30385EF84C133DF67C8DDE50DB3807E772E1A558FA285BB8118"
+        }
+    },
+    "shortcuts": [
+        [ "Office Tool Plus.exe", "Office Tool Plus" ]
+    ],
+    "checkver": {
+        "github": "https://github.com/YerongAI/Office-Tool"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/YerongAI/Office-Tool/releases/download/v$version/Office_Tool_with_runtime_v$version_x64.zip"
+            },
+            "arm64": {
+                "url": "https://github.com/YerongAI/Office-Tool/releases/download/v$version/Office_Tool_with_runtime_v$version_arm64.zip"
+            }
+        }
+    }
+}
