@@ -12,7 +12,7 @@
     "installer": {
         "script": [
             "Write-Host 'Trusting VB-Audio certificate to prevent security prompts...'",
-            "$sysFile = if ($architecture -eq '64bit') { 'vbaudio_cable64_win10.sys' } else { 'vbaudio_cable_win7.sys' }",
+            "$sysFile = if ($architecture -eq '64bit') { 'vbaudio_cable64_win7.sys' } else { 'vbaudio_cable_win7.sys' }",
             "$cert = (Get-AuthenticodeSignature \"$dir\\$sysFile\").SignerCertificate",
             "if ($cert) {",
             "    $store = New-Object System.Security.Cryptography.X509Certificates.X509Store 'TrustedPublisher', 'LocalMachine'",
