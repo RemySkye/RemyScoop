@@ -11,17 +11,13 @@
     },
     "installer": {
         "args": [
-            "/VERYSILENT",
-            "/SUPPRESSMSGBOXES",
-            "/NORESTART",
-            "/DIR=\"$dir\""
+            "/S",
+            "/D=$dir"
         ]
     },
     "uninstaller": {
         "args": [
-            "/VERYSILENT",
-            "/SUPPRESSMSGBOXES",
-            "/NORESTART"
+            "/S"
         ]
     },
     "checkver": "github"
