@@ -10,13 +10,15 @@
         "    Write-Host 'Warning: Equalizer APO was not found on this system!' -ForegroundColor Yellow",
         "    Write-Host 'Install Equalizer APO first, then reinstall HeSuVi.' -ForegroundColor Yellow",
         "} else {",
-        "    Write-Host 'Linking HeSuVi inside Equalizer APO config directory...' -ForegroundColor Green",
+        "    Write-Host 'Moving HeSuVi to Equalizer APO config directory to preserve permissions...' -ForegroundColor Green",
         "    if (Test-Path \"$apoPath\\HeSuVi\") { Remove-Item \"$apoPath\\HeSuVi\" -Force -Recurse }",
-        "    New-Item -ItemType Junction -Path \"$apoPath\\HeSuVi\" -Target \"$dir\\HeSuVi\" -Force | Out-Null",
+        "    Move-Item -Path \"$dir\\HeSuVi\" -Destination \"$apoPath\\HeSuVi\" -Force",
+        "    New-Item -ItemType Junction -Path \"$dir\\HeSuVi\" -Target \"$apoPath\\HeSuVi\" -Force | Out-Null",
         "}"
     ],
     "pre_uninstall": [
         "$apoPath = (Get-ItemProperty -Path 'HKLM:\\SOFTWARE\\EqualizerAPO' -Name 'ConfigPath' -ErrorAction SilentlyContinue).ConfigPath",
+        "if (Test-Path \"$dir\\HeSuVi\") { cmd.exe /c rmdir \"$dir\\HeSuVi\" }",
         "if ($apoPath -and (Test-Path \"$apoPath\\HeSuVi\")) {",
         "    Remove-Item \"$apoPath\\HeSuVi\" -Force -Recurse -ErrorAction SilentlyContinue",
         "}"
