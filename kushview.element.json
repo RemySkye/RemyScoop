@@ -1,0 +1,28 @@
+{
+    "version": "1.0.0",
+    "description": "A flexible plugin host and routing matrix by Kushview.",
+    "homepage": "https://kushview.net/element/",
+    "license": "GPL-3.0-or-later",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/kushview/element/releases/download/1.0.0/element-1.0.0-win64.exe",
+            "hash": "9144EC0B0263931CCAD8D91D6AE8634D8A8F64ECD5E365EA1FA6180688580769"
+        }
+    },
+    "installer": {
+        "args": [
+            "/VERYSILENT",
+            "/SUPPRESSMSGBOXES",
+            "/NORESTART",
+            "/DIR=\"$dir\""
+        ]
+    },
+    "uninstaller": {
+        "args": [
+            "/VERYSILENT",
+            "/SUPPRESSMSGBOXES",
+            "/NORESTART"
+        ]
+    },
+    "checkver": "github"
+}
