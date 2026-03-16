@@ -1,0 +1,16 @@
+{
+    "version": "4.1.1",
+    "description": "SG TCP Optimizer. A free, easy Windows program that provides an intuitive interface for tuning and optimizing your Internet connection.",
+    "homepage": "https://www.speedguide.net/downloads.php",
+    "license": "Freeware",
+    "url": "https://www.speedguide.net/files/TCPOptimizer.exe",
+    "hash": "0A49DC0D2CE725AF347DF632539B70AFCFD22B38E285920B515143332A5511E9",
+    "notes": "TCP Optimizer requires Administrator privileges to apply network changes.",
+    "bin": "TCPOptimizer.exe",
+    "shortcuts": [
+        [
+            "TCPOptimizer.exe",
+            "TCP Optimizer"
+        ]
+    ]
+}
