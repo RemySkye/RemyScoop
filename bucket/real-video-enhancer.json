@@ -16,6 +16,7 @@
         ]
     },
     "uninstaller": {
+        "file": "Uninstall.exe",
         "args": "/S"
     },
     "bin": "REAL-Video-Enhancer.exe",
