@@ -19,6 +19,12 @@
         "file": "Uninstall.exe",
         "args": "/S"
     },
+    "post_install": [
+        "Remove-Item \"$env:ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\TNTwise\" -Recurse -Force -ErrorAction SilentlyContinue",
+        "Remove-Item \"$env:APPDATA\\Microsoft\\Windows\\Start Menu\\Programs\\TNTwise\" -Recurse -Force -ErrorAction SilentlyContinue",
+        "Remove-Item \"$env:PUBLIC\\Desktop\\REAL Video Enhancer.lnk\" -Force -ErrorAction SilentlyContinue",
+        "Remove-Item \"$env:USERPROFILE\\Desktop\\REAL Video Enhancer.lnk\" -Force -ErrorAction SilentlyContinue"
+    ],
     "bin": "REAL-Video-Enhancer.exe",
     "shortcuts": [
         [
