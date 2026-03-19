@@ -3,6 +3,5 @@
 # Except the following:
 !/.gitignore
 !/README.md
-!/.tutorial.md
 !/bucket/
 !/bucket/*.json
