@@ -20,6 +20,7 @@ scoop install RemyScoop/kushview-element
 
 Here are the custom packages currently maintained in this bucket:
 
+* **infiniv-voiceflow** - VoiceFlow is a voice-to-text paste utility for Windows with local AI processing.
 * **kushview-element** - A flexible plugin host and routing matrix by Kushview.
 * **hesuvi** - Headphone Surround Virtualizations for Equalizer APO.
 * **office-tool-plus-with-runtime** - Office Tool Plus is a tool for managing, downloading and installing Microsoft Office.
